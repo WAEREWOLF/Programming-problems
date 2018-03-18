@@ -1,0 +1,18 @@
+// Citirea si scrierea in fiser c
+
+#include "stdio.h"
+ 
+int main() {
+    FILE* input = fopen("adunare.in", "r");
+    FILE* output = fopen("adunare.out", "w");
+ 
+    long a = -1;
+    long b = -1;
+    fscanf(input, "%ld", &a);
+    fscanf(input, "%ld", &b);
+    fclose(input);
+ 
+    fprintf(output, "%ld", a + b);
+    fclose(output);
+    return 0;
+}
